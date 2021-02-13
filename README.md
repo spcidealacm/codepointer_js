@@ -1,5 +1,5 @@
 # codepointer
-<img src='https://github.com/spcidealacm/codepointer/blob/master/demo.png' width='720'/>
+<img src='https://github.com/spcidealacm/codepointer_js/blob/master/demo.png' width='720'/>
 
 ## How To Run
 
