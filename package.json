@@ -13,14 +13,7 @@
 		"onStartupFinished"
 	],
 	"main": "./src/extension.js",
-	"contributes": {
-		"commands": [
-			{
-				"command": "codepointer.helloWorld",
-				"title": "Hello World"
-			}
-		]
-	},
+	"contributes": {},
 	"scripts": {
 		"lint": "eslint .",
 		"pretest": "npm run lint",

@@ -1,18 +1,24 @@
 const vscode = require('vscode');
-
+const { Tag } = require("./LineTag.js");
 function activate(context) {
+	let tag = new Tag();
+	tag.on(vscode.window.visibleTextEditors);
+	vscode.window.onDidChangeVisibleTextEditors(
+		function (editors) {
+			tag.off();
+			tag.on(editors);
+		}, null, context.subscriptions
+	);
 
-	console.log('Congratulations, your extension "codepointer" is now active!');
-
-	let disposable = vscode.commands.registerCommand('codepointer.helloWorld', function () {
-
-		vscode.window.showInformationMessage('Hello World from codepointer!');
-	});
-
-	context.subscriptions.push(disposable);
+	vscode.workspace.onDidChangeTextDocument(
+		function () {
+			tag.off();
+			tag.on(vscode.window.visibleTextEditors);
+		}, null, context.subscriptions
+	);
 }
 
-function deactivate() {}
+function deactivate() { }
 
 module.exports = {
 	activate,
