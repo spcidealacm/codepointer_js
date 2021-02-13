@@ -17,7 +17,7 @@
      ...
   3. build you own files (eg: example.c)
 
-## How to Use
+## How To Use
 
   1. open the files you have created.
   2. extension will show the Tag after a few seconds.
